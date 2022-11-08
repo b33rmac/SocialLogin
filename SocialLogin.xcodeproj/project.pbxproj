@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29F54AE8ED94C5927B6DE062 /* Pods_SocialLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA7D3E88FBB18F21BD78EBF /* Pods_SocialLogin.framework */; };
 		8FDFF03B2914EECB008D6210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDFF03A2914EECB008D6210 /* AppDelegate.swift */; };
 		8FDFF03D2914EECB008D6210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDFF03C2914EECB008D6210 /* SceneDelegate.swift */; };
 		8FDFF03F2914EECB008D6210 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDFF03E2914EECB008D6210 /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		8FDFF0432914EECC008D6210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FDFF0462914EECC008D6210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FDFF0482914EECC008D6210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF99F9C06DF844D7A880FABC /* Pods-SocialLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLogin.debug.xcconfig"; path = "Target Support Files/Pods-SocialLogin/Pods-SocialLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		BF79281D7198C4E0EC726718 /* Pods-SocialLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLogin.release.xcconfig"; path = "Target Support Files/Pods-SocialLogin/Pods-SocialLogin.release.xcconfig"; sourceTree = "<group>"; };
+		FAA7D3E88FBB18F21BD78EBF /* Pods_SocialLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F54AE8ED94C5927B6DE062 /* Pods_SocialLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				8FDFF0392914EECB008D6210 /* SocialLogin */,
 				8FDFF0382914EECB008D6210 /* Products */,
+				ED4191C9FD8B14337BAF26B7 /* Pods */,
+				FE967156B782CF82CD86362C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = SocialLogin;
 			sourceTree = "<group>";
 		};
+		ED4191C9FD8B14337BAF26B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF99F9C06DF844D7A880FABC /* Pods-SocialLogin.debug.xcconfig */,
+				BF79281D7198C4E0EC726718 /* Pods-SocialLogin.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE967156B782CF82CD86362C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAA7D3E88FBB18F21BD78EBF /* Pods_SocialLogin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FDFF04B2914EECC008D6210 /* Build configuration list for PBXNativeTarget "SocialLogin" */;
 			buildPhases = (
+				35E527D1421B042C34AB4591 /* [CP] Check Pods Manifest.lock */,
 				8FDFF0332914EECB008D6210 /* Sources */,
 				8FDFF0342914EECB008D6210 /* Frameworks */,
 				8FDFF0352914EECB008D6210 /* Resources */,
+				60AB42F341FC1B82E48365CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35E527D1421B042C34AB4591 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocialLogin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60AB42F341FC1B82E48365CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialLogin/Pods-SocialLogin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialLogin/Pods-SocialLogin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialLogin/Pods-SocialLogin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8FDFF0332914EECB008D6210 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		8FDFF04C2914EECC008D6210 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF99F9C06DF844D7A880FABC /* Pods-SocialLogin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +384,7 @@
 		};
 		8FDFF04D2914EECC008D6210 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF79281D7198C4E0EC726718 /* Pods-SocialLogin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

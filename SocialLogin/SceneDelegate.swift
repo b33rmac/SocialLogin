@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NaverThirdPartyLogin
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -46,7 +47,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
+    
+    // 토큰 요청
+    // Case 1. 네이버 앱에서 돌아올 때, 호출
+    // Case 2. 사파리 뷰 컨트롤러에서 돌아올 때는 호출 안 됨
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        print(#function)
+        NaverThirdPartyLoginConnection.getSharedInstance().receiveAccessToken(URLContexts.first?.url)
+    }
+    
 
 }
 

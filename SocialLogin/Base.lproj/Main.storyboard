@@ -47,11 +47,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="네이버 로그인"/>
+                                        <connections>
+                                            <action selector="naverLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XYh-7Y-hSo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jb-EH-ke0">
                                         <rect key="frame" x="0.0" y="44.333333333333343" width="350" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="로그아웃"/>
+                                        <connections>
+                                            <action selector="logoutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVf-GT-FWW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -67,6 +73,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GJW-kb-6e8" secondAttribute="trailing" constant="20" id="uXc-z3-WbE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="HXm-XS-5q0" id="hV8-bo-v1x"/>
+                        <outlet property="idLabel" destination="bvh-zW-ONw" id="VVb-WY-7qc"/>
+                        <outlet property="nameLabel" destination="ZwZ-Ya-WWw" id="3c5-WS-rWM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
